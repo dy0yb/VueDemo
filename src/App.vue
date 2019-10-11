@@ -10,7 +10,7 @@
       </div>
     </header>
     <div class="container">
-      <Add/>
+      <Add :addComment="addComment"/>
       <List :comments="comments"/>
     </div>
   </div>
@@ -22,7 +22,7 @@ import List from './comporents/List'
 export default {
   data () {
     return {
-      comments: [
+      comments: [ //
         {
           name: 'BOB',
           content: '不错'
@@ -36,6 +36,11 @@ export default {
           content: '不错'
         }
       ]
+    }
+  },
+  methods:{
+    addComment (comment) {
+      this.comments.unshift(comment);
     }
   },
   components: {List, Add}
