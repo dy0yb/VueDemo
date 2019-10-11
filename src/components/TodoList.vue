@@ -1,6 +1,6 @@
 <template>
   <ul class="todo-main">
-    <todo-item v-for="(todo, index) in todos" :key="index" :todo="todo" :index="index" :deleteTodo="deleteTodo"></todo-item>
+    <todo-item v-for="(todo, index) in todos" :key="index" :todo="todo" :index="index"></todo-item>
   </ul>
 </template>
 
@@ -8,8 +8,7 @@
 import TodoItem from './TodoItem'
 export default {
   props: {
-    todos: Array,
-    deleteTodo: Function
+    todos: Array
   },
   data () {
     return {
@@ -23,10 +22,10 @@ export default {
 
 <style scoped>
   .todo-main {
-    margin-left: 0px;
+    margin-left: 0;
     border: 1px solid #ddd;
     border-radius: 2px;
-    padding: 0px;
+    padding: 0;
   }
 
   .todo-empty {
