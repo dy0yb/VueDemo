@@ -46,9 +46,10 @@ export default {
         content
       }
 
-      this.addComment(comment);
-      this.name='';
-      this.content='';
+      this.addComment(comment)
+      // this.$emit('addComment', comment)
+      this.name = ''
+      this.content = ''
     }
   }
 }
